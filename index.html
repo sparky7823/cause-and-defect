@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f3ed" />
+  <title>Cause &amp; Defect — The System Sandbox</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="sim-engine.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#home" aria-label="Cause and Defect, the System Sandbox"><span class="wordmark-icon"><span></span></span><span class="wordmark-type"><b>Cause <i>&amp;</i> Defect</b><small>THE SYSTEM SANDBOX</small></span></a>
+      <nav class="topnav" aria-label="Main navigation"><a class="active" href="#home">Learning studio</a><a href="#about">How it works</a></nav>
+      <div class="topnote"><span class="live-dot"></span> Interactive systems lab</div>
+    </header>
+
+    <main>
+      <section id="dashboard" class="view dashboard-view" aria-labelledby="dashboardTitle">
+        <div class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow"><span>CAUSE &amp; DEFECT / 01</span><span>LEARNING THROUGH EXPERIMENT</span></div>
+            <h1 id="dashboardTitle">Understand the<br/><em>systems around us.</em></h1>
+            <p>Change the conditions. Make a prediction. See what a system does under pressure.</p>
+          </div>
+          <div class="hero-aside"><span class="hero-aside-number">01</span><span>Choose a lab<br/>to begin</span><span class="hero-line"></span></div>
+        </div>
+
+        <div class="section-label"><div><span class="eyebrow">THE LEARNING STUDIO</span><h2>Choose a system</h2></div><span class="section-count">01 ACTIVE LAB <i></i> 02 IN DEVELOPMENT</span></div>
+
+        <div class="scenario-grid">
+          <article class="scenario-card active-card">
+            <div class="scenario-top"><span class="number-chip">01</span><span class="status-pill active-status"><i></i> AVAILABLE NOW</span></div>
+            <div class="mini-architecture" aria-hidden="true">
+              <div class="mini-node user-node"><span>U</span><small>USERS</small></div><div class="mini-connector"></div>
+              <div class="mini-node shield-node"><span>◇</span><small>WAF</small></div><div class="mini-connector"></div>
+              <div class="mini-node app-node"><span>▦</span><small>APP</small></div><div class="mini-connector"></div>
+              <div class="mini-node db-node"><span>◉</span><small>DATA</small></div>
+            </div>
+            <div class="scenario-content"><div class="scenario-category">CLOUD INFRASTRUCTURE</div><h3>Cloud Reliability Sandbox</h3><p>Configure your architecture to survive a 1,000 req/sec traffic spike.</p></div>
+            <div class="scenario-bottom"><span>6 MIN LAB <b>·</b> CAPACITY PLANNING</span><button class="launch-link" data-launch>Enter lab <span>↗</span></button></div>
+          </article>
+
+          <article class="scenario-card upcoming-card">
+            <div class="scenario-top"><span class="number-chip">02</span><span class="status-pill soon-status">COMING SOON</span></div>
+            <div class="mini-burndown" aria-hidden="true"><span></span><span></span><span></span><span></span><svg viewBox="0 0 160 70"><path d="M4 9 C38 14 52 22 80 32 S125 48 156 59"/><path class="line-ghost" d="M4 9 C33 13 52 25 78 37 S126 53 156 65"/></svg></div>
+            <div class="scenario-content"><div class="scenario-category">PROJECT MANAGEMENT</div><h3>Sprint pressure</h3><p>See how meetings, interruptions, and new work change a team's capacity.</p></div>
+            <div class="scenario-bottom"><span>TEAM DYNAMICS <b>·</b> IN DEVELOPMENT</span><span class="lock-note">A future lab</span></div>
+          </article>
+
+          <article class="scenario-card upcoming-card">
+            <div class="scenario-top"><span class="number-chip">03</span><span class="status-pill soon-status">COMING SOON</span></div>
+            <div class="mini-network" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><svg viewBox="0 0 160 70"><path d="M24 38 54 17 81 34 110 13 137 30M24 38 52 56 81 34 106 56 137 30M54 17 52 56M110 13 106 56"/></svg></div>
+            <div class="scenario-content"><div class="scenario-category">NETWORK DYNAMICS</div><h3>The viral algorithm</h3><p>Explore how information moves through people and recommendation systems.</p></div>
+            <div class="scenario-bottom"><span>MEDIA LITERACY <b>·</b> IN DEVELOPMENT</span><span class="lock-note">A future lab</span></div>
+          </article>
+        </div>
+        <div class="dashboard-foot"><span>ONE SYSTEM, FULLY PLAYABLE.</span><span>More worlds are taking shape <span class="foot-arrow">↘</span></span></div>
+      </section>
+
+      <section id="lab" class="view lab-view" hidden aria-labelledby="labTitle">
+        <div class="lab-heading">
+          <button class="back-link" id="backButton"><span>←</span> All labs</button>
+          <div class="eyebrow">CAUSE &amp; DEFECT / CLOUD SYSTEMS <span class="heading-divider">·</span> CAPACITY LAB</div>
+          <h1 id="labTitle">Cloud Reliability <em>Sandbox.</em></h1>
+          <p>Configure your architecture to survive a synthetic 1,000 req/sec traffic spike. Sketch your latency forecast, then watch the app tier, WAF, and database respond.</p>
+        </div>
+
+        <div class="lab-layout">
+          <section class="architecture-card panel" aria-label="Live system architecture">
+            <div class="panel-heading"><div><span class="eyebrow">LIVE SYSTEM MODEL</span><h2>Request path</h2></div><div class="clock-pill"><span class="clock-dot"></span><span id="clockLabel">READY · 60 SEC DRILL</span></div></div>
+            <div class="architecture-wrap">
+              <div class="architecture-meta"><span>TRAFFIC PROFILE</span><strong id="trafficLabel">10 req/s baseline <span>→</span> 1,000 req/s surge</strong></div>
+              <svg id="architecture" viewBox="0 0 800 260" role="img" aria-label="Users send requests through a web application firewall to app servers and then a database">
+                <defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto"><path d="M0 0 7 3.5 0 7Z" fill="#aab5a9"/></marker></defs>
+                <path class="pipe" d="M155 128H248" marker-end="url(#arrow)"/><path class="pipe" d="M352 128H442" marker-end="url(#arrow)"/><path class="pipe" d="M578 128H655" marker-end="url(#arrow)"/>
+                <path class="flow-pulse" d="M155 128H248M352 128H442M578 128H655"/>
+                <g class="system-node" id="usersNode" transform="translate(42 75)"><rect width="112" height="106" rx="16"/><circle class="node-icon-bg" cx="56" cy="34" r="19"/><text class="node-symbol" x="56" y="40" text-anchor="middle">↗</text><text class="node-name" x="56" y="73" text-anchor="middle">TRAFFIC</text><text class="node-value" id="trafficValue" x="56" y="92" text-anchor="middle">10 req/s</text></g>
+                <g class="system-node" id="wafNode" transform="translate(248 75)"><rect width="104" height="106" rx="16"/><circle class="node-icon-bg" cx="52" cy="34" r="19"/><text class="node-symbol" x="52" y="40" text-anchor="middle">◇</text><text class="node-name" x="52" y="73" text-anchor="middle">EDGE WAF</text><text class="node-value" id="wafValue" x="52" y="92" text-anchor="middle">STANDBY</text></g>
+                <g class="system-node" id="appNode" transform="translate(442 75)"><rect width="136" height="106" rx="16"/><circle class="node-icon-bg" cx="68" cy="34" r="19"/><text class="node-symbol" x="68" y="40" text-anchor="middle">▦</text><text class="node-name" x="68" y="73" text-anchor="middle">APP SERVERS</text><text class="node-value" id="serverValue" x="68" y="92" text-anchor="middle">2 / 50</text></g>
+                <g class="system-node" id="dbNode" transform="translate(655 75)"><rect width="112" height="106" rx="16"/><circle class="node-icon-bg" cx="56" cy="34" r="19"/><text class="node-symbol" x="56" y="40" text-anchor="middle">◉</text><text class="node-name" x="56" y="73" text-anchor="middle">DATABASE</text><text class="node-value" id="dbValue" x="56" y="92" text-anchor="middle">POOL 30</text></g>
+                <g class="server-dots" id="serverDots"></g>
+                <text class="diagram-label" x="198" y="115" text-anchor="middle">FILTER</text><text class="diagram-label" x="397" y="115" text-anchor="middle">SCALE</text><text class="diagram-label" x="615" y="115" text-anchor="middle">QUERY</text>
+              </svg>
+              <div class="system-readouts"><div class="readout"><span>APP CAPACITY</span><div class="meter"><i id="appMeter"></i></div><b id="appLoad">0%</b></div><div class="readout"><span>DB CONNECTIONS</span><div class="meter db-meter"><i id="dbMeter"></i></div><b id="dbLoad">0%</b></div><div class="readout status-readout"><span>SYSTEM STATUS</span><b id="systemStatus" class="status-healthy">READY</b></div></div>
+            </div>
+            <div class="metrics-row"><div class="metric"><span>LATENCY</span><strong id="latencyMetric">80<small>ms</small></strong></div><div class="metric"><span>ERROR RATE</span><strong id="errorMetric">0<small>%</small></strong></div><div class="metric"><span>ACTIVE SERVERS</span><strong id="activeMetric">2<small> / 50</small></strong></div><div class="metric"><span>WAF BLOCKED</span><strong id="blockedMetric">0<small> req/s</small></strong></div></div>
+            <div class="chart-section">
+              <div class="chart-heading"><div><span class="eyebrow">YOUR PREDICTION</span><h2>Latency through the surge</h2></div><div class="chart-legend"><span><i class="legend-forecast"></i> Your forecast</span><span><i class="legend-actual"></i> Actual</span></div></div>
+              <div class="chart-shell"><div class="chart-y-labels"><span>5,000</span><span>2,500</span><span>0</span><small>MS</small></div><svg id="latencyChart" viewBox="0 0 620 170" preserveAspectRatio="none" aria-label="Draw a predicted latency curve on this chart, then compare it with the simulated outcome" tabindex="0">
+                <path class="chart-grid" d="M10 12H610M10 82H610M10 152H610"/><text class="axis-label" x="13" y="166">0 SEC</text><text class="axis-label" x="565" y="166">60 SEC</text><polyline id="forecastLine" class="forecast-line"/><polyline id="actualLine" class="actual-line"/>
+              </svg></div>
+              <div class="chart-instruction" id="chartInstruction"><span class="draw-icon">⌁</span> Drag across the chart to draw your latency prediction before the test.</div>
+            </div>
+          </section>
+
+          <aside class="config-column">
+            <section class="panel config-card">
+              <div class="panel-heading"><div><span class="eyebrow">ARCHITECTURE SETTINGS</span><h2>Prepare for the surge</h2></div><span class="settings-index">01—04</span></div>
+              <p class="panel-intro">A web app starts with <b>2 servers</b>. Each can handle 50 requests per second.</p>
+              <div class="slider-control"><div class="slider-heading"><label for="maxServers">Auto-scaling ceiling</label><strong><span id="maxServersValue">50</span><small>servers</small></strong></div><input type="range" id="maxServers" min="5" max="50" step="5" value="50"><div class="slider-scale"><span>5</span><span>50</span></div></div>
+              <div class="slider-control"><div class="slider-heading"><label for="wafStrength">WAF bot filtering</label><strong><span id="wafValueLabel">50</span><small>%</small></strong></div><input type="range" id="wafStrength" min="0" max="100" step="5" value="50"><div class="slider-scale"><span>Off</span><span>Blocks more bot traffic</span></div></div>
+              <div class="slider-control"><div class="slider-heading"><label for="poolSize">DB pool per server</label><strong><span id="poolValue">30</span><small>connections</small></strong></div><input type="range" id="poolSize" min="5" max="50" step="5" value="30"><div class="slider-scale"><span>5</span><span>50</span></div></div>
+              <div class="slider-control final-slider"><div class="slider-heading"><label for="botShare">Bot-like traffic in surge</label><strong><span id="botShareValue">40</span><small>%</small></strong></div><input type="range" id="botShare" min="0" max="80" step="5" value="40"><div class="slider-scale"><span>None</span><span>Most of the surge</span></div></div>
+              <div class="toggles"><label class="toggle-row"><span><b>Auto-scaling</b><small>New servers take 8 seconds to start.</small></span><input type="checkbox" id="autoscale" checked><i></i></label><label class="toggle-row"><span><b>Web application firewall</b><small>Filters a share of bot-like requests.</small></span><input type="checkbox" id="wafEnabled" checked><i></i></label></div>
+              <div class="draw-prompt"><span class="prompt-number">02</span><span><b>Make a prediction</b><small>Sketch what you think latency will do.</small></span></div>
+              <div class="playback"><button class="primary-button" id="runButton">Run 60-second drill <span>→</span></button><div class="playback-row"><button class="text-button" id="pauseButton" hidden>Pause</button><button class="text-button" id="resetButton">Reset lab</button><span id="playbackNote">60 seconds · accelerated playback</span></div></div>
+              <div class="feedback" id="feedback" role="status"></div>
+            </section>
+            <section class="model-note" id="modelNote"><span class="note-icon">i</span><p><b>Illustrative model.</b> Each app server handles 50 req/s, scaling takes 8 seconds, and the database has a shared 300-connection budget. Traffic is synthetic; the simplified rules make bottlenecks visible.</p></section>
+          </aside>
+        </div>
+        <section class="insight-card" id="insightCard" aria-live="polite"><div class="insight-mark">↗</div><div><span class="eyebrow">AFTER THE TEST</span><h2 id="insightTitle">Every layer has a limit.</h2><p id="insightText">Draw a forecast and run the drill to see where the bottleneck appears. Adding servers helps the app tier, but the database has its own connection budget.</p></div><div class="next-challenge"><span>NEXT EXPERIMENT</span><b id="nextChallenge">Tune the pool before scaling to the ceiling.</b></div></section>
+        <footer class="lab-footer"><span>CAUSE &amp; DEFECT <b>·</b> CLOUD RELIABILITY</span><span>One system. One question. One better mental model.</span></footer>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
