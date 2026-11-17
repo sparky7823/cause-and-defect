@@ -1,3 +1,4 @@
+(function () {
 const BASE_TRAFFIC = 10;
 const PEAK_TRAFFIC = 1000;
 const APP_REQUESTS_PER_SERVER = 50;
@@ -101,3 +102,4 @@ window.SimEngine = {
   measureSystem,
   stepSimulation
 };
+})();

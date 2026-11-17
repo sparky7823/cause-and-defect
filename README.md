@@ -10,6 +10,8 @@ Cause & Defect is a small interactive learning lab about how complex systems beh
 
 The learner prepares a simple request path—traffic, a web application firewall, app servers, and a database—then predicts latency by drawing a line on the chart. A 60-second simulation plays through the surge. The measured latency curve appears beside the forecast, followed by an explanation of the bottleneck.
 
+The settings separate simulation conditions (bot-like traffic) from architecture controls, so the learner can distinguish system pressure from the defenses they configure. The chart marks 0, 30, and 60 seconds to make the forecast easier to draw. After the run, a reset action starts another drill while preserving the chosen settings.
+
 The settings let learners change:
 
 - The auto-scaling ceiling, from 5 to 50 app servers

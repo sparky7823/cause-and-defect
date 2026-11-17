@@ -1,3 +1,4 @@
+(function () {
 const { CHART_MAX_LATENCY, DATABASE_SAFE_CONNECTIONS, createInitialState, measureSystem, stepSimulation } = window.SimEngine;
 
 const $ = (selector) => document.querySelector(selector);
@@ -44,6 +45,7 @@ function resetSimulation(clearForecast = true) {
   $('#playbackNote').textContent = '60 seconds · accelerated playback';
   $('#feedback').classList.remove('show');
   $('#insightCard').classList.remove('revealed');
+  $('#tryAgainButton').hidden = true;
   $('#chartInstruction').textContent = clearForecast
     ? 'Drag across the chart to draw your latency prediction before the test.'
     : 'Forecast saved. Run the drill to compare your dashed line with the outcome.';
@@ -220,6 +222,7 @@ function finishExplanation(data) {
   $('#feedback').textContent = `Peak latency: ${peak.latency.toLocaleString()} ms · Peak errors: ${maxError.toFixed(maxError % 1 ? 1 : 0)}% · ${Math.round(peak.wafBlocked).toLocaleString()} req/s filtered by the WAF.`;
   $('#feedback').classList.add('show');
   $('#insightCard').classList.add('revealed');
+  $('#tryAgainButton').hidden = false;
   window.setTimeout(() => $('#insightCard').scrollIntoView({ behavior: 'smooth', block: 'center' }), 120);
 }
 
@@ -316,6 +319,11 @@ $('#pauseButton').addEventListener('click', () => {
 });
 
 $('#resetButton').addEventListener('click', () => resetSimulation());
+$('#tryAgainButton').addEventListener('click', () => {
+  resetSimulation();
+  document.querySelector('.lab-layout').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
 
 updateSettingLabels();
 renderSystem(measureSystem(state.engine, readSettings(), 0));
+})();
