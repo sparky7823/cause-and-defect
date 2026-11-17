@@ -4,6 +4,8 @@
 
 Cause & Defect is a small interactive learning lab about how complex systems behave under pressure. The first playable lab explores cloud reliability during a synthetic traffic surge.
 
+**Live demo:** [Cause & Defect — The System Sandbox](https://sparky7823.github.io/cause-and-defect/)
+
 ## The cloud reliability lab
 
 The learner prepares a simple request path—traffic, a web application firewall, app servers, and a database—then predicts latency by drawing a line on the chart. A 60-second simulation plays through the surge. The measured latency curve appears beside the forecast, followed by an explanation of the bottleneck.
@@ -43,4 +45,4 @@ The database model estimates concurrent connection demand from app traffic, limi
 
 ## Publishing
 
-The site is a static bundle and can be hosted on GitHub Pages. Once published, add the Pages URL here so the project has one reliable share link.
+The site is a static bundle hosted from the root of the `main` branch with GitHub Pages.
