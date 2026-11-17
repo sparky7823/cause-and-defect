@@ -7,8 +7,7 @@ button{cursor:pointer}
 .app-shell{max-width:1500px;min-height:100vh;margin:0 auto;padding:0 42px 40px}
 .topbar{height:72px;display:flex;align-items:center;gap:50px;border-bottom:1px solid #dfded4}
 .wordmark{display:inline-flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-family:Manrope,sans-serif;font-size:17px;font-weight:800;letter-spacing:-.055em}
-.wordmark-icon{width:25px;height:25px;border:1px solid #aec0ad;border-radius:8px;display:grid;place-items:center;transform:rotate(-8deg)}
-.wordmark-icon span{width:9px;height:9px;border-radius:50%;background:var(--terracotta);box-shadow:5px -4px 0 -2px var(--sage)}
+.wordmark-logo{display:block;width:34px;height:34px;object-fit:contain;flex:none}
 .wordmark-type{display:flex;flex-direction:column;gap:1px}.wordmark-type b{font-size:15px;line-height:1.1;letter-spacing:-.055em}.wordmark-type i{font-style:normal;color:var(--terracotta)}.wordmark-type small{font-size:6px;line-height:1.1;letter-spacing:.19em;color:#8a948a;font-weight:800}
 .topnav{display:flex;align-items:center;gap:27px;height:100%}
 .topnav a{height:100%;display:flex;align-items:center;position:relative;color:#7c847e;text-decoration:none;font-size:12px}

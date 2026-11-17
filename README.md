@@ -36,6 +36,7 @@ Then visit `http://localhost:8000`.
 
 - `index.html` — dashboard and cloud lab markup
 - `styles.css` — responsive visual design
+- `logo.svg` — Cause & Defect mark, used in the header and browser tab
 - `app.js` — interface state, playback, chart, and explanation
 - `sim-engine.js` — independent, deterministic traffic and capacity model
 
